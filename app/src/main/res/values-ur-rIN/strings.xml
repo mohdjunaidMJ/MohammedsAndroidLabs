@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">mohammed\'s Android Labs</string>
-    <string name="hello_message">Hello World!</string>
-    <string name="button_message">I\'m a button</string>
-
-
+    <string name="hello_message">hello duniya</string>
+    <string name="button_message">Mein ek button hun</string>
 </resources>
