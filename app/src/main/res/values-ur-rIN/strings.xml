@@ -3,4 +3,7 @@
     <string name="app_name">mohammed\'s Android Labs</string>
     <string name="hello_message">hello duniya</string>
     <string name="button_message">Mein ek button hun</string>
+    <string name="Button1">1button</string>
+    <string name="Button2">2button</string>
+    <string name="Button3">3button</string>
 </resources>
