@@ -1,29 +1,31 @@
 package algonquin.cst2335.juna0006;
 
 
+import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import algonquin.cst2335.juna0006.databinding.ActivityChatRoomBinding;
+import algonquin.cst2335.juna0006.databinding.ReceiveMessageBinding;
+import algonquin.cst2335.juna0006.databinding.SentMessageBinding;
 
-import algonquin.cst2335.juna0006.dataBinding.ActivityChatroomBinding;
 
-public class ChatRoom extends AppCompatActivity {
+public  class ChatRoom extends AppCompatActivity {
     private ArrayList<ChatMessage> messageList;
-    ActivityChatRoom binding;
+    ActivityChatRoomBinding binding;
     private RecyclerView.Adapter myAdapter;
-    SimpleDateFormat sdf = new SimpleDateFormat("EEEE, dd-MMM-yyyy hh-mm-ss a");
+    SimpleDateFormat sdf = new SimpleDateFormat(    "EEEE, dd-MMM-yyyy hh-mm-ss a");
     String currentDateAndTime = sdf.format(new Date());
     ChatMessage chat = new ChatMessage("","",false);
     @Override
@@ -60,16 +62,15 @@ public class ChatRoom extends AppCompatActivity {
             @NonNull
             @Override
             public MyRowHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                if(viewType==0) {
+                if (viewType == 0) {
                     SentMessageBinding binding = SentMessageBinding.inflate(getLayoutInflater(),
                             parent, false);
                     View root = binding.getRoot();
                     return new MyRowHolder(root);
-                }
-                else{
-                    RecieveMessageBinding binding = RecieveMessageBinding.inflate(getLayoutInflater(),
-                            parent, false
-                    );
+                } else {
+                    ReceiveMessageBinding binding = ReceiveMessageBinding.inflate(getLayoutInflater(),
+                            parent, false);
+
                     View root = binding.getRoot();
                     return new MyRowHolder(root);
                 }

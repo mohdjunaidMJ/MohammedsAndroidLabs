@@ -7,18 +7,26 @@
     tools:context=".ChatRoom">
 
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/theRecycleView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
-<Button
-    android:id="@+id/sendButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="10dp"
-    android:text="Send"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
 <EditText
     android:id="@+id/textInput"
@@ -34,17 +42,8 @@
     tools:ignore="MissingConstraints"
     tools:text="Type here " />
 
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/theRecycleView"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:textSize="100sp"
-    app:layout_constraintBottom_toTopOf="@+id/textInput"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
 
-<Button
+    <Button
     android:id="@+id/button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

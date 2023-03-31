@@ -7,7 +7,10 @@ android {
     compileSdk 33
 
     dataBinding{
-        enable=true
+        enabled = true
+    }
+    buildFeatures{
+        viewBinding true
     }
 
     defaultConfig {
